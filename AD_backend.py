@@ -11,7 +11,7 @@ from tkinter import ttk, messagebox
 
 def connect():
     try:
-        conn=mysql.connector.connect(user='root',password='ferrari1',host='localhost',database='school_management')
+        conn=mysql.connector.connect(user='root',password='<PASSWORD>',host='localhost',database='school_management')
         cur=conn.cursor()
     except:
         messagebox.showerror('Error','System can\'t connect with MySQL for some reason')
@@ -23,7 +23,7 @@ def connect():
 
 def show_all_data(tree_table):
 	try:
-		conn=mysql.connector.connect(user='root',password='ferrari1',host='localhost',database='school_management')
+		conn=mysql.connector.connect(user='root',password='<PASSWORD>',host='localhost',database='school_management')
 		cur=conn.cursor()
 	except:
 		messagebox.showerror('Error','System can\'t connect with MySQL for some reason')
@@ -42,7 +42,7 @@ def add(roll,name,gender,dob,email,phone,tree_table):
 	try:
 		if (roll and name and gender and dob and email and phone) != '':
 			try:
-				conn=mysql.connector.connect(user='root',password='ferrari1',host='localhost',database='school_management')
+				conn=mysql.connector.connect(user='root',password='<PASSWORD>',host='localhost',database='school_management')
 				cur=conn.cursor()
 			except:
 				messagebox.showerror('Error','System can\'t connect with MySQL for some reason')
@@ -61,7 +61,7 @@ def add(roll,name,gender,dob,email,phone,tree_table):
 def delete(delete_id,tree_table):
 	try:
 		try:
-			conn=mysql.connector.connect(user='root',password='ferrari1',host='localhost',database='school_management')
+			conn=mysql.connector.connect(user='root',password='<PASSWORD>',host='localhost',database='school_management')
 			cur=conn.cursor()
 		except:
 			messagebox.showerror('Error','System can\'t connect with MySQL for some reason')
@@ -79,7 +79,7 @@ def delete(delete_id,tree_table):
 
 def update(roll,name,gender,dob,email,phone,tree_table):
 	try:
-		conn=mysql.connector.connect(user='root',password='ferrari1',host='localhost',database='school_management')
+		conn=mysql.connector.connect(user='root',password='<PASSWORD>',host='localhost',database='school_management')
 		cur=conn.cursor()
 	except:
 		messagebox.showerror('Error','System can\'t connect with MySQL for some reason')
@@ -95,7 +95,7 @@ def update(roll,name,gender,dob,email,phone,tree_table):
 def set_search_by_option(search_parameter,tree_table,search_parameter_entry):
 
 	try:
-		conn=mysql.connector.connect(user='root',password='ferrari1',host='localhost',database='school_management')
+		conn=mysql.connector.connect(user='root',password='<PASSWORD>',host='localhost',database='school_management')
 		cur=conn.cursor()
 	except:
 		messagebox.showerror('Error','System can\'t connect with MySQL for some reason')
